@@ -1,0 +1,353 @@
+
+
+
+
+ /* Import Google Fonts */ 
+@import url('https://fonts.googleapis.com/css2?family=Merienda&family=Poppins:wght@400;600&display=swap');
+
+/* Fullscreen homepage */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #2a2929;
+  color: rgb(122, 116, 116);
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+/* Left side - text */
+.home-left {
+  flex: 1;
+  padding: 60px;
+}
+
+/* Heading with Merienda font */
+.merienda-heading {
+  font-family: 'Merienda', cursive;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #4f4d4d;
+  margin-bottom: 1rem;
+}
+
+/* Paragraph styling */
+.poppins-para {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #635f5f;
+  margin-top: 1rem;
+}
+
+
+
+
+
+
+/* Font color utilities */
+.light-text {
+  color: #746e6e; /* bright white */
+}
+
+.medium-text {
+  color: #a29c9c; /* soft light gray */
+}
+
+.dark-text {
+  color: #aaaaaa; /* slightly darker gray */
+}
+
+/* Specific font style if you want */
+.courier-text {
+  font-family: 'Courier Prime', monospace;
+}
+
+/* Combined action bar: Download + Icons */
+.action-bar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Download CV button */
+.download-btn {
+  background-color: rgb(170, 169, 167);
+  color: #2a2929;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.download-btn:hover {
+  background-color: #96b6ac;
+  color: #fff;
+  box-shadow: 0 0 10px 5px aquamarine;
+  transform: scale(1.05);
+}
+
+/* Social icon styling */
+.social-icon {
+  font-size: 40px;
+  color: #ffffff;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 50%;
+  margin-top: -80px;
+}
+
+.social-icons-wrapper {
+  display: flex;
+  gap: 20px;
+  margin-top: -10px; /* ⬅️ This moves them up */
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #365353;
+  background-color: #96b6ac;
+  box-shadow: 0 0 10px 5px aquamarine;
+}
+
+/* Right side - image */
+.home-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Hero image styling */
+.hero-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(76, 74, 74, 0.1);
+  filter: grayscale(100%) brightness(0.9) contrast(1.1);
+  box-shadow: 0 0 40px 10px aquamarine;
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-img:hover {
+  filter: grayscale(0%) brightness(1) contrast(1);
+  box-shadow: 0 0 60px 15px aquamarine;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .home-left,
+  .home-right {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .action-bar {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .social-icon {
+    font-size: 36px;
+  }
+
+  .download-btn {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+}
+
+
+
+.certificates-section {
+  margin-top: 200px;
+  text-align: center;
+  padding: 0 20px; /* Reduced side padding */
+  width: 100%;
+}
+
+.certificates-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+   font-size: 1.8rem;
+  text-align: center;
+}
+
+.certificates-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+    margin-top: 40px;
+
+  gap: 20px;
+  padding: 0;
+}
+
+.certificate-img {
+  width: 300px;
+  height: auto;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.certificate-img:hover {
+  transform: scale(1.05);
+
+   background-color: #96b6ac;
+  color: #fff;
+  box-shadow: 0 0 10px 5px aquamarine;
+
+  
+}
+
+/* Fullscreen image view */
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.fullscreen-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #fff;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .home-left {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .home-right {
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .hero-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .merienda-heading {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .poppins-para {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0.8rem 0;
+    padding: 0 10px;
+  }
+
+  .action-bar {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .download-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .social-icons-wrapper {
+    gap: 15px;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .social-icon {
+    font-size: 32px;
+    margin: 0;
+  }
+
+  .certificates-section {
+    margin-top: 100px;
+    padding: 0 10px;
+  }
+
+  .certificates-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .certificates-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .certificate-img {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .fullscreen-img {
+    max-width: 95%;
+    max-height: 80%;
+  }
+}

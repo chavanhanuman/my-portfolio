@@ -1,0 +1,50 @@
+.footer {
+  background-color: #1f2937; /* Dark Gray (Tailwind's gray-800) */
+  color: #f3f4f6;            /* Light text (gray-100) */
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-number {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.social-links {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-link {
+  text-decoration: none;
+  color: #f3f4f6;  /* Light text */
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #60a5fa; /* Tailwind blue-400 */
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  filter: brightness(0) invert(1); /* Make icons white-ish if they're black */
+}
+
+.separator {
+  font-weight: bold;
+  font-size: 18px;
+  color: #9ca3af; /* Gray-400 */
+  user-select: none;
+}
